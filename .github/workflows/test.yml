@@ -1,0 +1,17 @@
+
+name: Test for this repository developement
+
+on: [push, pull_request]
+
+jobs:
+  test_beta_job:
+    runs-on: ubuntu-latest
+    name: npm-check-updates reporter
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: prComment
+      - run: echo "Comment URL - ${{ steps.prComment.outputs.commentUrl }}"
+        if: steps.prComment.outputs.commentUrl
