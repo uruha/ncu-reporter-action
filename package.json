@@ -1,0 +1,33 @@
+{
+  "name": "ncu-reporter-action",
+  "version": "1.0.0",
+  "description": "npm check updates PR reporter",
+  "main": "index.js",
+  "scripts": {
+    "package": "ncc build index.js -m",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uruha/ncu-reporter-action.git"
+  },
+  "keywords": [
+    "github-actions",
+    "typescript",
+    "docker"
+  ],
+  "author": "Kotaro Chiba",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uruha/ncu-reporter-action/issues"
+  },
+  "homepage": "https://github.com/uruha/ncu-reporter-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^4.0.0",
+    "npm-check-updates": "^7.1.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.23.0"
+  }
+}
